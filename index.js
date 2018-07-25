@@ -36,7 +36,7 @@ restService.post("/htmltest", function(req, res) {
       : "Seems like some problem. Speak again.Demo by Vatsal Patel";
   return res.json({
     speech: speech,
-    displayText: speech,
+    displayText: '<html><head><title>test html </title></head><body> <h1> this is html test in heroku & DailogFlow </h1> <img src="https://www.syncfusion.com/products/wpf/control/images/sfchart/Chart%20Types/charttype_1.png" /></body></html>',
     source: "Dialogflow-demo-sample"
   });
 });
