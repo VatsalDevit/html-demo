@@ -1,4 +1,5 @@
 "use strict";
+var http = require('http')
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -27,7 +28,7 @@ restService.post("/echo", function(req, res) {
   });
 });
 
-restService.post("/htmltest", function(req, res) {
+http.post("/htmltest", function(req, res) {
   return '<html><head><title>test html </title></head><body> <h1> this is html test in heroku & DailogFlow </h1> <img src="https://www.syncfusion.com/products/wpf/control/images/sfchart/Chart%20Types/charttype_1.png" /></body></html>'
 });
 
