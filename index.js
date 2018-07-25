@@ -1,7 +1,7 @@
 "use strict";
 
-var http = require('express');
-
+var express = require('express');
+var app = express();
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -30,9 +30,12 @@ restService.post("/echo", function(req, res) {
   });
 });
 
-http.post('/create', function (req, res) {
+app.get('/', function(req, res) {
+  // We must end the request when we are done handling it
   res.write('Hello World!');
+  res.end();
 });
+module.exports = app;
 
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
