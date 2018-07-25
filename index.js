@@ -30,7 +30,7 @@ restService.post("/echo", function(req, res) {
   });
 });
 
-app.get('/', function(req, res) {
+app.get("/create", function(req, res) {
   // We must end the request when we are done handling it
   res.write('Hello World!');
   res.end();
