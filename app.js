@@ -1,14 +1,12 @@
-var express = require('express');
-var app = express();
-// Our handler function is passed a request and response object
-    app.get('/', function(req, res) {
-      // We must end the request when we are done handling it
-      res.write('Hello World!');
-      res.end();
-    });
+var http = require('http');
 
-    restService.listen(process.env.PORT || 8000, function() {
-  console.log("Server up and listening");
+//create a server object:
+http.createServer(function (req, res) {
+  res.write('Hello World!'); //write a response to the client
+  res.end(); //end the response
 });
 
-    module.exports = app;
+restService.listen(process.env.PORT || 8000, function() {
+  console.log("Server up and listening");
+});
+//the server object listens on port 8080
