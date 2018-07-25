@@ -1,8 +1,5 @@
 "use strict";
 
-var http = require('express');
-var app = express();
-
 const express = require("express");
 const bodyParser = require("body-parser");
 
@@ -29,16 +26,6 @@ restService.post("/echo", function(req, res) {
     source: "Dialogflow-demo-sample"
   });
 });
-
-
-app.post('/user', function(req, res){
-        response = {"html web Demo"};
-      
-        console.log(response);
-        
-        
-        res.end(JSON.stringify(response));
-    });
 
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
