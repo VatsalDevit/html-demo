@@ -28,17 +28,7 @@ restService.post("/echo", function(req, res) {
 });
 
 restService.post("/htmltest", function(req, res) {
-  var speech =
-    req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.echoText
-      ? req.body.result.parameters.echoText
-      : "Seems like some problem. Speak again.Demo by Vatsal Patel";
-  return res.json({
-    speech: speech,
-    displayText: '<html><head><title>test html </title></head><body> <h1> this is html test in heroku & DailogFlow </h1> <img src="https://www.syncfusion.com/products/wpf/control/images/sfchart/Chart%20Types/charttype_1.png" /></body></html>',
-    source: "Dialogflow-demo-sample"
-  });
+  return '<html><head><title>test html </title></head><body> <h1> this is html test in heroku & DailogFlow </h1> <img src="https://www.syncfusion.com/products/wpf/control/images/sfchart/Chart%20Types/charttype_1.png" /></body></html>'
 });
 
 restService.listen(process.env.PORT || 8000, function() {
