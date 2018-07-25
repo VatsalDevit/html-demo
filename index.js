@@ -1,6 +1,6 @@
 "use strict";
 
-var http = require('http');
+var http = require('express');
 
 
 const express = require("express");
@@ -30,9 +30,8 @@ restService.post("/echo", function(req, res) {
   });
 });
 
-http.createServer(function (req, res) {
-    res.write('Hello World!'});
-    res.end();
+http.post('/create', function (req, res) {
+  res.write('Hello World!');
 });
 
 restService.listen(process.env.PORT || 8000, function() {
